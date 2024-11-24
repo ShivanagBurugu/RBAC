@@ -1,0 +1,151 @@
+/* General container styling */
+.role-management {
+  padding: 20px;
+  background-color: #d9dfe0;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.role-management:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Add button styling */
+.add-role-button {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  background-color: #28a745;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-role-button:hover {
+  background-color: #1e7b31;
+  transform: scale(1.05);
+}
+
+/* Table styling */
+.role-table {
+  margin-top: 20px;
+  font-size: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.role-table th,
+.role-table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 12px;
+}
+
+.role-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.role-table td {
+  background-color: #ffffff;
+}
+
+.role-table td button {
+  margin-right: 5px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+/* Modal styling */
+.modal-content {
+  background-color: #ffffff;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-header,
+.modal-footer {
+  background-color: #f0f0f0;
+}
+
+.modal-title {
+  color: #007bff;
+}
+
+button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .role-management {
+    padding: 15px;
+  }
+
+  .role-table th,
+  .role-table td {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .add-role-button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+/* Additional styles for small screens (200px to 300px) */
+@media (max-width: 300px) {
+  /* Reduce padding for smaller screens */
+  .role-management {
+    padding: 5px;
+  }
+
+  /* Adjust Add Role Button for small screens */
+  .add-role-button {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  /* Adjust table cell padding and font size */
+  .role-table th,
+  .role-table td {
+    font-size: 10px;
+    padding: 6px;
+  }
+
+  .role-table {
+    font-size: 11px;
+  }
+
+  /* Action buttons */
+  .role-table td button {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  /* Modal content adjustments */
+  .modal-content {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Add spacing between action buttons */
+  .action-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  /* Ensure button hover effects still apply */
+  .add-role-button:hover,
+  .role-table td button:hover {
+    transform: scale(1.03);
+  }
+}
