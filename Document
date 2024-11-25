@@ -1,0 +1,56 @@
+  -------------------------Role-Based Access Control (RBAC) UI-----------------------------------
+
+Deployment Link::::https://majestic-griffin-b9320b.netlify.app/
+Github Link:::::https://github.com/ShivanagBurugu/RBAC/
+
+Project Overview:::::::::::
+This project is a Role-Based Access Control (RBAC) User Interface designed for administrators to manage users, roles, and permissions efficiently.
+It provides a secure and user-friendly platform for assigning roles, defining permissions, and performing CRUD operations on users and roles. 
+The application is built with a focus on modularity, responsiveness,  ensuring seamless functionality across devices.
+
+User Management::::::::::::::
+View and manage all registered users.
+Add new users with relevant details.
+Edit existing user information.
+Delete users securely with confirmation prompts.
+Assign roles to users and toggle their status (Active/Inactive).
+
+Role Management:::::::::
+Create, edit, and delete roles dynamically.
+Assign permissions (e.g., Read, Write, Delete) to roles.
+Display permissions associated with each role in an intuitive table format.
+
+Dynamic Permissions:::::
+Define and modify permissions for roles in real-time.
+Ensure granular control over access rights for users.
+
+Technologies Used:::
+
+Frontend:::::::::
+React.js: To build dynamic and reusable UI components.
+CSS: For custom styling and responsive design.
+Bootstrap: For responsive and pre-styled components.
+Font Awesome / Bootstrap Icons: To enhance the visual appeal with intuitive icons.
+React Hooks: For state management and lifecycle handling (e.g., useState, useEffect).
+
+API Simulation:::::
+JSON Server: To mock backend API endpoints for CRUD operations.
+Axios: To handle HTTP requests and interact with mock APIs.
+
+Development Tools:::::::::
+Node.js: To run the development server and build the project.
+NPM (Node Package Manager): For managing project dependencies.
+ESLint & Prettier: To ensure code quality and maintain consistent styling.
+Git: For version control during the development process.
+
+Testing::::::::::
+React Testing Library: To write and execute unit tests for components.
+Jest: For running tests and ensuring code reliability.
+
+Deployment::::::::
+Netlify / Vercel / GitHub Pages: For deploying the application and hosting it online.
+
+Version Control:::::::::::::
+GitHub: For project repository hosting and collaboration.
+
+
