@@ -99,6 +99,25 @@ button:hover {
   transform: scale(1.05);
 }
 
+/* Form styling */
+form .form-group {
+  margin-bottom: 15px;
+}
+
+form .form-check {
+  margin-top: 15px;
+}
+
+form .form-check-label {
+  font-size: 16px;
+  color: #333;
+}
+
+form .form-control {
+  border-radius: 8px;
+  padding: 10px;
+}
+
 /* Responsive styles for mobile view */
 @media (max-width: 768px) {
   .user-management {
@@ -165,6 +184,7 @@ button:hover {
     padding: 5px 10px;
   }
 }
+
 @media (max-width: 300px) {
   .user-management {
     padding: 5px;

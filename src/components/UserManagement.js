@@ -9,26 +9,37 @@ function UserManagement({ roles, users, addUser, updateUser, deleteUser }) {
     name: "",
     email: "",
     role: "NULL",
+    active: false,
   });
 
   const handleClose = () => {
     setShow(false);
     setEditIndex(null);
-    setCurrentUser({ name: "", email: "", role: "NULL" });
+    setCurrentUser({ name: "", email: "", role: "NULL", active: false });
   };
   const handleShow = () => setShow(true);
 
   const handleSaveUser = () => {
+    const updatedUser = {
+      ...currentUser,
+      status: currentUser.active ? "Active" : "Inactive",
+    };
     if (editIndex !== null) {
-      updateUser(editIndex, currentUser);
+      updateUser(editIndex, updatedUser);
     } else {
-      addUser(currentUser);
+      addUser(updatedUser);
     }
     handleClose();
   };
 
   const handleEditUser = (index) => {
-    setCurrentUser(users[index]);
+    const userToEdit = users[index];
+    setCurrentUser({
+      name: userToEdit.name,
+      email: userToEdit.email,
+      role: userToEdit.role,
+      active: userToEdit.status === "Active",
+    });
     setEditIndex(index);
     handleShow();
   };
@@ -51,6 +62,7 @@ function UserManagement({ roles, users, addUser, updateUser, deleteUser }) {
             <th>Name</th>
             <th>Email</th>
             <th>Role</th>
+            <th>Status</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -60,6 +72,7 @@ function UserManagement({ roles, users, addUser, updateUser, deleteUser }) {
               <td>{user.name}</td>
               <td>{user.email}</td>
               <td>{user.role || "NULL"}</td>
+              <td>{user.status}</td>
               <td>
                 <Button
                   variant="warning"
@@ -127,6 +140,16 @@ function UserManagement({ roles, users, addUser, updateUser, deleteUser }) {
                   </option>
                 ))}
               </Form.Control>
+            </Form.Group>
+            <Form.Group>
+              <Form.Check
+                type="checkbox"
+                label="Active"
+                checked={currentUser.active}
+                onChange={(e) =>
+                  setCurrentUser({ ...currentUser, active: e.target.checked })
+                }
+              />
             </Form.Group>
           </Form>
         </Modal.Body>

@@ -7,28 +7,10 @@ import "./App.css";
 function App() {
   const [view, setView] = useState("users");
   const [roles, setRoles] = useState(
-    () =>
-      JSON.parse(localStorage.getItem("roles")) || [
-        { roleName: "Admin", permissions: ["Read", "Write", "Delete"] },
-        { roleName: "User", permissions: ["Read"] },
-      ]
+    () => JSON.parse(localStorage.getItem("roles")) || []
   );
   const [users, setUsers] = useState(
-    () =>
-      JSON.parse(localStorage.getItem("users")) || [
-        {
-          name: "Alice",
-          email: "alice@example.com",
-          role: "Admin",
-          status: "Active",
-        },
-        {
-          name: "Bob",
-          email: "bob@example.com",
-          role: "User",
-          status: "Inactive",
-        },
-      ]
+    () => JSON.parse(localStorage.getItem("users")) || []
   );
 
   useEffect(() => {
